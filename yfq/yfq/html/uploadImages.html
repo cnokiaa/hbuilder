@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<title>易分期</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/uploadImages.css">
+	<script src="../js/libs/flexible.js" type="text/javascript" charset="utf-8"></script>
+	
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<!--<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>-->
+		<h1 class="mui-title">易分期</h1>
+	</header>
+	<div class="main-con">
+		<nav class="nav">
+			<ul class="nav-list">
+				<li class="active">申请人照片</li>
+				<li class="active-arr"></li>
+				<li>个人资料</li>
+				<li></li>
+				<li>银行卡信息</li>
+				<li></li>
+				<li>提交申请</li>
+			</ul>
+		</nav>
+		<!-- 填写姓名身份证号 -->
+		<h2>填写您的真实身份信息</h2>
+		<div class="part-con">
+			<div class="input-con">
+				<label for="relname">姓&emsp;&emsp;名：</label>
+				<input id="relname" type="text" placeholder="请输入你的真实姓名" maxlength="16" autocomplete="off" value="">
+			</div>
+			<div class="input-con">
+				<label for="idcard">身份证号：</label>
+				<input id="idcard" type="text" placeholder="请输入身份证号" maxlength="18" autocomplete="off" value="">
+			</div>
+		</div>
+		<div class="upload">
+			<div class="tipupload">
+				<p>请按图示要求上传您的身份证照片</p>
+				<strong class="clearfix"><b></b>错误示例</strong>
+			</div>
+			<div class="upload-con clearfix">
+				<div class="pic-part clearfix">
+					<div class="example-pic">
+						<img big-src="../images/bigcard_1.jpg" src="../images/facecard.jpg" alt="反面照">
+					</div>
+					<div class="take-photo idcard-back-bg">
+						<img src="" alt="">
+					</div>
+				</div>
+				<div class="pic-part clearfix">
+					<div class="example-pic">
+						<img big-src="../images/bigcard_2.jpg" src="../images/backcard.jpg" alt="正面国徽面照">
+					</div>
+					<div class="take-photo idcard-bg">
+						<img src="" alt="">
+					</div>
+				</div>
+				<div class="pic-part clearfix">
+					<div class="example-pic">
+						<img big-src="../images/bigcard_3.jpg" src="../images/catchcard.jpg" alt="手持身份证照">
+					</div>
+					<div class="take-photo idcard-now">
+						<img src="" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="agreement clearfix ellipsis">同意<span>《个人征信查询及报送授权声明》</span><i></i></div>
+		<div class="sub">立即申请</div>
+		<form action="">
+			<!-- 脱敏真实信息 -->
+			<!-- 姓名 -->
+			<input type="hidden" id="relnameShow" name="applicant" value="liu">
+			<!-- 身份证 -->
+			<input type="hidden" id="idcardShow" name="certno" value="440582199012025817">
+
+			<input id="certfirstimgMediaId" type="hidden" name="certfirstimgMediaId" value="">
+			<input id="certsecondimgMediaId" type="hidden" name="certsecondimgMediaId" value="">
+			<input id="nowphotoMediaId" type="hidden" name="nowphotoMediaId" value="">
+		</form>
+	</div>
+	<!-- 提示弹窗 -->
+	<div class="popup">
+		<div class="popup-con">
+			<p>提示信息</p>
+			<div>确定</div>
+		</div>
+	</div>
+	<!-- 照片放大 -->
+	<div class="show-pic">
+		<div class="show-pic-con">
+			<!-- 关闭按钮 -->
+			<span class="close-pan"></span>
+			<h3></h3>
+			<div class="big-img">
+				<img src="" alt="放大图">
+			</div>
+			<div class="big-img-tips"></div>
+		</div>
+	</div>
+	<!-- 错误示例 -->
+	<div class="wrong-con">
+		<div id="top-bar">
+			<div id="top-bar-btn" class="back-botton"></div>
+			<div class="title ellipsis">错误示例</div>
+		</div>
+		<div class="wrong">
+			<img src="../images/ex_wrong1.jpg">
+		</div>
+	</div>
+	<div class="agreement-iframe">
+		<div class="agreement-iframe-bar">
+			<div class="back-botton"></div>
+			<div class="title ellipsis">个人征信查询及报送授权声明</div>
+		</div>
+		<div class="agreement-i-c">
+			<iframe src="http://download.lakala.com.cn/lklmbl/html/lakala_zhengxing_chaxun.html" id="iframepage" frameborder="0"></iframe>
+		</div>
+	</div>
+	<script type="text/javascript" data-main="../js/imports/uploadImages_I.js" src="../js/libs/require.js"></script>
+</body>
+</html>

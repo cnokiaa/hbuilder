@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../css/uploadImages.css" />
+	<script src="../js/libs/flexible.js" type="text/javascript" charset="utf-8"></script>
+	<title>替你还</title>
+</head>
+<body>
+	<nav class="nav step1">
+		<div class="nav-step">
+			<div class="nav-inner">
+				<div class="progress"></div>
+				<ul>
+					<li><b>1</b></li>
+					<li><b>2</b></li>
+					<li><b>3</b></li>
+					<li><b>4</b></li>
+				</ul>
+			</div>
+		</div>
+		<ul class="nav-tit clearfix">
+			<li>申请人照片</li>
+			<li>个人资料</li>
+			<li>银行卡信息</li>
+			<li>提交申请</li>
+		</ul>
+	</nav>
+	<div class="main-con" style="margin-top:0">
+		<div class="tips">
+			<p>请上传本人身份证照片，确保周围环境光线充足，拍照不要晃动，以便快速审批</p>
+		</div>
+		<div class="tipupload">
+			<p>请按图示要求上传您的身份证照片</p>
+			<strong>错误示例</strong>
+		</div>
+		<div class="upload">
+			<div class="upload-con clearfix">
+				<div class="pic-part clearfix">
+					<div class="example-pic">
+						<img big-src="../images/bigcard_1.jpg" src="../images/facecard.jpg" alt="反面照">
+					</div>
+					<div class="take-photo idcard-back-bg">
+						<img src="" alt="">
+					</div>
+				</div>
+				<div class="pic-part clearfix">
+					<div class="example-pic">
+						<img big-src="../images/bigcard_2.jpg" src="../images/backcard.jpg" alt="正面国徽面照">
+					</div>
+					<div class="take-photo idcard-bg">
+						<img src="" alt="">
+					</div>
+				</div>
+				<div class="pic-part clearfix">
+					<div class="example-pic">
+						<img big-src="../images/bigcard_3.jpg" src="../images/catchcard.jpg" alt="正面国徽面照">
+					</div>
+					<div class="take-photo">
+						<p>点击拍摄<br/>手持身份证照</p>
+						<img src="" alt="">
+					</div>
+				</div>
+				<form action="">
+					<input id="certfirstimgMediaId" type="hidden" name="certfirstimgMediaId" value="">
+					<input id="certsecondimgMediaId" type="hidden" name="certsecondimgMediaId" value="">
+					<!-- 错误信息提示 -->
+					<input type="hidden" class="errmsgShow" value="">
+				</form>
+			</div>
+		</div>
+		<div class="sub">下一步</div>
+		
+	</div>
+	<!-- 提示弹窗 -->
+	<div class="popup">
+		<div class="popup-con">
+			<p>提示信息</p>
+			<div>确定</div>
+		</div>
+	</div>
+	<!-- 照片放大 -->
+	<div class="show-pic">
+		<div class="show-pic-con">
+			<!-- 关闭按钮 -->
+			<span class="close-pan"></span>
+			<h3></h3>
+			<div class="big-img">
+				<img src="" alt="放大图">
+			</div>
+			<div class="big-img-tips"></div>
+		</div>
+	</div>
+	<!-- 错误示例 -->
+	<div class="wrong-con">
+		<div id="top-bar">
+			<div id="top-bar-btn" class="back-botton"></div>
+			<div class="title ellipsis">错误示例</div>
+		</div>
+		<div class="wrong">
+			<img src="../images/ex_wrong1.jpg">
+		</div>
+	</div>
+	<script type="text/javascript" data-main="../js/imports/uploadImages_I.js" src="../js/libs/require.js"></script>
+</body>
+</html>

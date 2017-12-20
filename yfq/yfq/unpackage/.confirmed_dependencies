@@ -1,0 +1,202 @@
+{
+  "index.html": {
+    "href": "index.html",
+    "priority": 0,
+    "resources": [],
+    "refer": []
+  },
+  "html/uploadImages.html": {
+    "href": "html/uploadImages.html",
+    "resources": [
+      "css/reset.css",
+      "css/uploadImages.css",
+      "js/libs/flexible.js",
+      "js/imports/uploadImages_I.js",
+      "js/modules/uploadImages.js",
+      "js/config.js",
+      "js/libs/require.js",
+      "images/idcard_bg.jpg",
+      "images/nav_arrow_fill.png",
+      "js/libs/class.js",
+      "images/backcard.jpg",
+      "images/facecard.jpg",
+      "images/idcard_now.jpg",
+      "images/ex_wrong1.jpg",
+      "js/utils.js",
+      "images/nav_arrow.png",
+      "js/libs/zepto.min.js",
+      "images/loading.gif",
+      "js/libs/touch.js",
+      "images/idcard_back_bg.jpg",
+      "images/catchcard.jpg",
+      "images/gantanhao.png",
+      "images/agree.png",
+      "images/bigcard_1.jpg",
+      "images/bigcard_2.jpg",
+      "images/close_bigpic.png",
+      "images/bigcard_3.jpg",
+      "images/arrow.png",
+      "images/disagree.png"
+    ],
+    "refer": [
+      "html/addPersonalAndWorkUnit.html",
+      "html/../html/addPersonalAndWorkUnit.html"
+    ],
+    "priority": 0
+  },
+  "html/addPersonalAndWorkUnit.html": {
+    "resources": [
+      "js/utils.js",
+      "images/tel_tip.png",
+      "js/libs/zepto.min.js",
+      "js/modules/addPersonalAndWorkUnit.js",
+      "images/arrow.png",
+      "js/libs/touch.js",
+      "js/libs/underscore-min.js",
+      "js/imports/addPersonalAndWorkUnit_I.js",
+      "css/addPersonalAndWorkUnit.css",
+      "js/config.js",
+      "js/libs/iscroll-lite.js",
+      "images/nav_arrow_fill.png",
+      "images/nav_arrow.png",
+      "js/libs/require.js",
+      "css/reset.css",
+      "js/libs/flexible.js",
+      "html/addPersonalAndWorkUnit.html",
+      "js/provinceList.json",
+      "js/contactRelationList.json",
+      "js/cityAreaList.json",
+      "js/cityList.json",
+      "images/right.png"
+    ],
+    "refer": [
+      "html/../html/addBankCard.html",
+      "html/addBankCard.html"
+    ]
+  },
+  "html/addBankCard.html": {
+    "resources": [
+      "js/utils.js",
+      "js/libs/zepto.min.js",
+      "js/libs/touch.js",
+      "js/modules/addBankCard.js",
+      "css/addBankCard.css",
+      "js/imports/addBankCard_I.js",
+      "js/config.js",
+      "js/libs/iscroll-lite.js",
+      "images/nav_arrow_fill.png",
+      "images/arrow.png",
+      "js/libs/flexible.js",
+      "js/libs/require.js",
+      "css/reset.css",
+      "js/libs/mui.picker.min.js",
+      "js/libs/mui.min.js",
+      "css/mui.picker.min.css",
+      "css/mui.poppicker.css",
+      "js/debitBankList.json"
+    ],
+    "refer": [
+      "html/../html/applyLoan.html",
+      "html/../html/trialCalculate.html",
+      "html/trialCalculate.html"
+    ]
+  },
+  "html/../html/addPersonalAndWorkUnit.html": {
+    "refer": [
+      "html/../html/addBankCard.html"
+    ],
+    "resources": []
+  },
+  "html/applyLoan.html": {
+    "resources": [
+      "js/utils.js",
+      "js/modules/applyLoan.js",
+      "js/libs/zepto.min.js",
+      "js/libs/touch.js",
+      "css/applyLoan.css",
+      "js/config.js",
+      "js/libs/iscroll-lite.js",
+      "js/imports/applyLoan_I.js",
+      "images/agree.png",
+      "js/libs/flexible.js",
+      "images/nav_arrow_fill.png",
+      "js/libs/require.js",
+      "css/reset.css",
+      "html/applyLoan.html"
+    ],
+    "refer": [
+      "html/../html/success.html",
+      "html/success.html",
+      "html/yfqxy.html"
+    ]
+  },
+  "html/trialCalculate.html": {
+    "resources": [
+      "js/libs/zepto.min.js",
+      "js/modules/trialCalculate.js",
+      "js/imports/trialCalculate_I.js",
+      "css/trialCalculate.css",
+      "js/libs/touch.js",
+      "js/libs/underscore-min.js",
+      "js/config.js",
+      "css/reset.css",
+      "js/libs/flexible.js",
+      "js/libs/require.js",
+      "images/nav_arrow_fill.png",
+      "js/product.json",
+      "js/plan.json",
+      "html/repaymentPlan.html"
+    ],
+    "refer": [
+      "html/applyLoan.html",
+      "html/../html/applyLoan.html",
+      "html/../html/repaymentPlan.html"
+    ]
+  },
+  "html/../html/trialCalculate.html": {
+    "refer": [
+      "html/../html/applyLoan.html"
+    ],
+    "resources": []
+  },
+  "html/../html/addBankCard.html": {
+    "refer": [
+      "html/../html/trialCalculate.html"
+    ],
+    "resources": []
+  },
+  "html/success.html": {
+    "resources": [
+      "images/right.png",
+      "images/lkl_app.jpg",
+      "css/success.css",
+      "css/reset.css",
+      "js/libs/flexible.js",
+      "js/libs/zepto.min.js"
+    ],
+    "refer": []
+  },
+  "html/yfqxy.html": {
+    "href": "html/yfqxy.html",
+    "priority": 0,
+    "resources": [
+      "css/reset.css"
+    ],
+    "refer": []
+  },
+  "html/../html/applyLoan.html": {
+    "refer": [
+      "html/../html/success.html"
+    ],
+    "resources": []
+  },
+  "html/repaymentPlan.html": {
+    "resources": [
+      "css/repaymentPlan.css",
+      "html/trialCalculate.html",
+      "css/reset.css",
+      "js/libs/flexible.js"
+    ],
+    "refer": []
+  }
+}

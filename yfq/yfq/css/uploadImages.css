@@ -1,0 +1,437 @@
+@charset "utf-8";
+html,
+body {
+	background-color: #eceff6;
+}
+/*加载*/
+.loading {
+	position: fixed;
+	display:none;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+	z-index: 1000;
+}
+.loading div {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 2rem;
+	height: 2rem;
+	margin: auto;
+	background: url("../images/loading.gif") no-repeat center center;
+	-webkit-background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	-ms-background-size: 100% 100%;
+	-o-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+.part-con {
+	margin-bottom: 1rem;
+	padding-left: 4.69%;
+	border-top: 1px solid #e2e2e6;
+	border-bottom: 1px solid #e2e2e6;
+	background-color: #fff;
+}
+h2 {
+	padding: 0.25rem 0 0 4.69%;
+	background-color: #efeff4;
+	color: #3c3c3c;
+	font-size: 0.55rem;
+	line-height: 1.55rem;
+}
+.input-con {
+	position: relative;
+	margin-top: -1px;
+	padding: 0 3.12% 0 0;
+	width: 96.88%;
+	height: 1.75rem;
+	border-top: 1px solid #e2e2e6;
+	color: #3c3c3c;
+	font: normal 0.55rem/1.75rem "Microsoft YaHei";
+}
+.input-con input {
+	width: 100%;
+	height: 100%;
+	padding-left: 5em;
+	padding-right: 1rem;
+	border: 0;
+	outline: none;
+	line-height: normal;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.input-con label {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 5.5em;
+	height: 100%;
+	color: #333;
+	font: normal 0.55rem/1.75rem "Microsoft YaHei";
+}
+/*温馨提示*/
+.tipupload {
+	padding: 0.53rem 4.69% 0.28rem;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-box;
+	display: -o-box;
+	display: box;
+}
+.tipupload p {
+	font-size: 0.55rem;
+	line-height: 0.9rem;
+}
+.tipupload b {
+	float: left;
+	width: 0.7rem;
+	height: 0.9rem;
+	padding-left: 0.3rem;
+	background: url('../images/gantanhao.png') no-repeat center center;
+	-webkit-background-size: auto 60%;
+	-moz-background-size: auto 60%;
+	-ms-background-size: auto 60%;
+	-o-background-size: auto 60%;
+	background-size: auto 60%;
+}
+.tipupload strong {
+	display: block;
+	width: 3.35rem;
+	height: 0.9rem;
+	color: #fff;
+	font-size: 0.46rem;
+	line-height: 0.9rem;
+	text-align: center;
+	background: #3db3f9;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
+	border-radius: 4px;
+}
+.tipupload p {
+	-webkit-box-flex: 1;
+	-moz-box-flex: 1;
+	-ms-box-flex: 1;
+	box-flex: 1;
+}
+/*上传图片部分*/
+/*提示信息，错误示例*/
+.upload {
+	margin-bottom: 0.8rem;
+	padding-bottom: 0.25rem;
+	background-color: #fff;
+	border: 1px solid #e2e2e6;
+	border-width: 1px 0;
+}
+/*照片部分*/
+.pic-part {
+	padding: 0.25rem 2.34%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.pic-part:last-child {
+	border: 0;
+}
+/*示例照片*/
+.example-pic {
+	float: left;
+}
+.take-photo {
+	float: right;
+	background-color: #3db3f9;
+}
+.idcard-back-bg {
+	background: url('../images/idcard_back_bg.jpg') no-repeat 0 0;
+	-webkit-background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	-ms-background-size: 100% 100%;
+	-o-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+.idcard-bg {
+	background: url('../images/idcard_bg.jpg') no-repeat 0 0;
+	-webkit-background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	-ms-background-size: 100% 100%;
+	-o-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+.idcard-now {
+	background: url('../images/idcard_now.jpg') no-repeat 0 0;
+	-webkit-background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	-ms-background-size: 100% 100%;
+	-o-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+.example-pic,
+.take-photo {
+	position: relative;
+	width: 48.85%;
+	padding-top: 30.37%;
+}
+.example-pic img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+.example-pic p {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: rgba(0,0,0,0.5);
+	color: #fefefe;
+	font: normal 0.5rem/1rem "Microsoft YaHei";
+	text-align: center;
+}
+.take-photo p {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 100%;
+	margin-top: -1rem;
+	color: #fff;
+	font: normal 0.65rem/1rem "Microsoft YaHei";
+	text-align: center;
+}
+.take-photo img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: none;
+	width: 100%;
+	height: 100%;
+}
+.agreement {
+	margin-bottom: 0.75rem;
+	padding: 0 4.69%;
+	height: 1rem;
+	font-size: 0.6rem;
+	line-height: 1rem;
+}
+.agreement i {
+	display: block;    
+	position: relative;
+	float: left;
+	width: .7rem;
+	height: .7rem;
+	margin-right: 0.2rem;
+	background: url('../images/agree.png') no-repeat center center;
+	-webkit-background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	-ms-background-size: 100% 100%;
+	-o-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+.agreement span {
+	color: #3cb3f9;
+}
+.disagree i {
+	background: url('../images/disagree.png') no-repeat center center;
+	-webkit-background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	-ms-background-size: 100% 100%;
+	-o-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+/*立即申请按钮*/
+.sub {
+	width: 93.75%;
+	height: 2rem;
+	margin: 0 auto 0.42rem;
+	background-color: #3db3f9;
+	color: #fff;
+	font: normal 0.65rem/2rem "Microsoft YaHei";
+	text-align: center;
+	-webkit-border-radius: 0.25rem;
+	-moz-border-radius: 0.25rem;
+	-ms-border-radius: 0.25rem;
+	-o-border-radius: 0.25rem;
+	border-radius: 0.25rem;
+}
+.disabled {
+	background-color: #b6b6ba;
+}
+/*弹窗提示*/
+.popup {
+	position: fixed;
+	left: 0;
+	top: 0;
+	display: none;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.65);
+	z-index: 1000;
+}
+.popup-con {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 28.03%;
+	overflow: hidden;
+	width: 10rem;
+	margin: 0 auto;
+	background-color: #fff;
+	-webkit-border-radius: 0.3rem;
+	-moz-border-radius: 0.3rem;
+	-ms-border-radius: 0.3rem;
+	-o-border-radius: 0.3rem;
+	border-radius: 0.3rem;
+}
+.popup-con p {
+	padding: 1rem 1em;
+	border-bottom: 1px solid #9c9f9f;
+	color: #000;
+	font: bold 0.6rem/0.93rem "Microsoft YaHei";
+	text-align: center;
+	word-break:break-all;
+}
+.popup-con div {
+	color: #319aff;
+	font: normal 0.6rem/1.75rem "Microsoft YaHei";
+	text-align: center;
+}
+/*照片放大*/
+.show-pic {
+	position: fixed;
+	left: 0;
+	top: 0;
+	display: none;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+}
+.show-pic-con {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 11.81%;
+	width: 84.38%;
+	margin: 0 auto;
+	padding: 1.05rem 0;
+	background-color: #fff;
+}
+/*叉叉*/
+.close-pan {
+	position: absolute;
+	left: 0.25rem;
+	top: 0.25rem;
+	width: 1rem;
+	height: 1rem;
+	background: url('../images/close_bigpic.png') no-repeat center center;
+	-webkit-background-size: 50%;
+	-moz-background-size: 50%;
+	-ms-background-size: 50%;
+	-o-background-size: 50%;
+	background-size: 50%;
+}
+.show-pic-con h3 {
+	margin-bottom: 0.5rem;
+	font: normal 0.65rem/0.75rem "Microsoft YaHei";
+	text-align: center;
+}
+.big-img {
+	width: 100%;
+	margin-bottom: 0.88rem;
+}
+.big-img img {
+	display: block;
+	width: 100%;
+}
+.big-img-tips {
+	padding: 0 0.7rem;
+}
+.big-img-tips p {
+	color: #3c3c3c;
+	font: normal 0.5rem/0.75rem "Microsoft YaHei";
+}
+/*错误示例*/
+.wrong-con {
+	display: none;
+}
+.wrong img {
+	display: block;
+	width: 100%;
+	padding-top: 2.2rem;
+}
+#top-bar,
+.agreement-iframe-bar {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 2.2rem;
+	background-color: #03a7e4;
+	z-index: 100;
+}
+.back-botton {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 1.2rem;
+	height: 2.2rem;
+	background: url("../images/arrow.png") no-repeat center center;
+	-webkit-background-size: auto 50%;
+	-moz-background-size: auto 50%;
+	-ms-background-size: auto 50%;
+	-o-background-size: auto 50%;
+	background-size: auto 50%;
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+.title {
+	height: 2.2rem;
+	padding: 0 1.2rem;
+	color: #fff;
+	font: bold 0.8rem/2.2rem "SimHei";
+	text-align: center;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.agreement-iframe {
+	position: fixed;
+	left: 0;
+	top: 0;
+	display: none;
+	width: 100%;
+	height: 100%;
+	padding-top: 2.2rem;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.agreement-iframe-bar {
+	position: absolute;
+}
+.agreement-i-c {
+	position: relative;
+	height: 100%;
+	overflow-y: scroll;
+ 	-webkit-overflow-scrolling: touch;  
+}
+.agreement-iframe iframe {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}

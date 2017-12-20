@@ -1,0 +1,48 @@
+{
+	"index.html": {
+		"resources": [
+			"css/common.css",
+			"js/update.js",
+			"js/shortcut.js",
+			"js/immersed.js"
+		],
+		"refer": [
+			"plus/camera.html",
+			"plus/barcode.html",
+			"plus/downloader.html",
+			"plus/gallery.html",
+			"plus/file.html",
+			"plus/message.html"
+		]
+	},
+	"plus/camera.html": {
+		"resources": [
+			"js/common.js"
+		],
+		"refer": [
+			"plus/camera_image.html"
+		]
+	},
+	"plus/camera_image.html": {
+		"resources": [
+			"js/common.js",
+			"css/common.css"
+		]
+	},
+	"plus/barcode.html": {
+		"resources": [
+			"img/barcode.png"
+		]
+	},
+	"plus/downloader.html": {
+		"resources": [
+			"js/common.js"
+		]
+	},
+	"plus/file.html": {
+		"resources": [
+			"img/fdisk.png",
+			"img/fup.png"
+		]
+	}
+}

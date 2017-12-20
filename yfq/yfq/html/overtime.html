@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<script src="../js/libs/flexible_v2.js" type="text/javascript" charset="utf-8"></script>
+	<title>超时</title>
+	<style>
+		html {
+			background-color: #efeff4;
+		}
+		html,body {
+			margin: 0;
+			padding: 0;
+		}
+		.wrap {
+			padding: 3.45rem 0 2rem;
+		}
+		.wrap img {
+			display: block;
+			width: 81.25%;
+			margin: 0 auto 2.3rem;
+		}
+		.btn {
+			width: 78.13%;
+			height: 1.75rem;
+			margin: 0 auto;
+			background-color: #f58737;
+			color: #fff;
+			font: normal 0.75rem/1.75rem "Microsoft YaHei";
+			text-align: center;
+			-webkit-box-shadow: 0 3px 1px 0 #b1b1b5;
+			-moz-box-shadow: 0 3px 1px 0 #b1b1b5;
+			-ms-box-shadow: 0 3px 1px 0 #b1b1b5;
+			-o-box-shadow: 0 3px 1px 0 #b1b1b5;
+			box-shadow: 0 3px 1px 0 #b1b1b5;
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			-ms-border-radius: 5px;
+			-o-border-radius: 5px;
+			border-radius: 5px;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<img src="../images/overtime.png" alt="超时">
+		<div class="btn" id="close-btn">关闭</div>
+	</div>
+	<!-- 配置微信 -->
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script type="text/javascript">
+		function addEvent(ele, eventType, handler) {
+			if (ele.addEventListener) {
+				ele.addEventListener(eventType, handler, false);
+			} else {
+				ele.attachEvent("on" + eventType, handler);
+			}
+		}
+		var btn = document.getElementById('close-btn');
+		wx.config({
+			debug: true, 
+			appId: '${appId}',
+			timestamp: '${timestamp}',
+			nonceStr: '${nonceStr}',
+			signature: '${signature}',
+			jsApiList : ["closeWindow"]
+		});
+		wx.ready(function() {
+			addEvent(btn,'touchend', function() {
+				wx.closeWindow();
+			});
+		})
+	</script>
+</body>
+</html>

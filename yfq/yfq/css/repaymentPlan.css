@@ -1,0 +1,80 @@
+@charset "utf-8";
+/*还款概况*/
+.repay-sta {
+	padding: 0 0.5rem;
+	background-color: #fff;
+}
+.repay-sta span {
+	display: block;
+	margin-bottom: 0.85rem;
+	color: #3c3c3c;
+	font: normal 0.63rem/1.23rem "Microsoft YaHei";
+}
+.total-m {
+	margin-bottom: 0.3rem;
+	text-align: center;
+	color: #3c3c3c;
+	font-size: 0.5rem;
+}
+.total-m strong {
+	color: #f00;
+	font: normal 1.13rem/1.63rem "Microsoft YaHei";
+}
+.explan {
+	margin-bottom: 2.27rem;
+	font: normal 0.5rem/0.75rem "Microsoft YaHei";
+	text-align: center;
+}
+.explan strong {
+	color: #f00;
+}
+.tips {
+	height: 0.75rem;
+	margin-bottom: 0.5rem;
+	color: #3c3c3c;
+	font: normal 0.5rem/0.75rem "Microsoft YaHei";
+}
+.list {
+	margin-bottom: 1.18rem;
+	border-top: 1px solid #e2e2e6; 
+	border-bottom: 1px solid #e2e2e6;
+	background-color: #fff;
+}
+.list li:after {
+	display: block;
+	height: 0;
+	content: "\200B";
+	clear: both;
+}
+.list li {
+	padding: 0 0.5rem;
+	border-bottom: 1px solid #e2e2e6;
+	font-size: 0.65rem;
+	line-height: 1.7rem;
+}
+.list li:last-child {
+	border: 0;
+}
+.list strong {
+	float: left;
+	color: #3c3c3c;
+}
+.list span {
+	float: right;
+	color: #3c3c3c;
+}
+/*返回按钮*/
+.go-back {
+	width: 93.75%;
+	height: 1.9rem;
+	margin: 0 auto 1rem;
+	background-color: #02a7e3;
+	color: #fff;
+	font: normal 0.7rem/1.9rem "Microsoft YaHei";
+	text-align: center;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+}

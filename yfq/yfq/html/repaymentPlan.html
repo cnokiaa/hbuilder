@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/repaymentPlan.css">
+	<script src="../js/libs/flexible.js" type="text/javascript" charset="utf-8"></script>
+	<title>易分期</title>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<!--<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>-->
+		<h1 class="mui-title">易分期</h1>
+	</header>
+	<div class="main-con">
+	<!-- 还款概况 -->
+	<div class="repay-sta">
+		<span>总还款金额：</span>
+		<p class="total-m"><strong>10,720.00</strong>元</p>
+		<!-- 服务费说明 -->
+		<p class="explan">含分期服务费<strong>60</strong>元/期</p>
+		<p class="tips">实际订单信息以实际放款结果与实际还款计划为准。</p>
+	</div>
+	<ul class="list">
+		<li>
+			<strong>第1期</strong>
+			<span>1,726.66</span>
+		</li>
+		<li>
+			<strong>第1期</strong>
+			<span>1,726.66</span>
+		</li>
+		<li>
+			<strong>第1期</strong>
+			<span>1,726.66</span>
+		</li>
+		<li>
+			<strong>第1期</strong>
+			<span>1,726.66</span>
+		</li>
+		<li>
+			<strong>第1期</strong>
+			<span>1,726.66</span>
+		</li>
+	</ul>
+	<!-- 返回按钮 -->
+	<div class="go-back" id="goback">返回</div>
+	</div>
+	<script type="text/javascript" charset="utf-8">
+		(function() {
+			var touchend = 'ontouchstart' in document ? 'touchend' : 'click';
+			var backBtn = document.getElementById('top-bar-btn');
+			var goBackBtn = document.getElementById('goback');
+			function addEvent(ele, eventType, handler) {
+				if (ele.addEventListener) {
+					ele.addEventListener(eventType, handler, false);
+				} else {
+					ele.attachEvent("on" + eventType, handler);
+				}
+			}
+			function back() {
+				window.history.back();
+			}
+			addEvent(goBackBtn, touchend, back);
+		})()
+	</script>
+</body>
+</html>

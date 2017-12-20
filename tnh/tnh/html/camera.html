@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>123
+	<script>
+	function plusReady(){
+    	// 在这里调用plus api
+	    console.log("fuck you plusready");
+	}
+	// 扩展API加载完毕后调用onPlusReady回调函数 
+	if(window.plus){
+	    plusReady();
+	}else{
+	    document.addEventListener('plusready',plusReady,false);
+	}
+	function openCamera() {console.log("opening");
+	    var cmr = plus.camera.getCamera();
+		cmr.captureImage( function ( p ) {
+			plus.io.resolveLocalFileSystemURL( p, function ( entry ) {
+				$this.images.localId[_index] = entry.toLocalURL();
+				_this.children("img").attr("src", entry.toLocalURL()).show();
+				closeLoad();
+			}, function ( e ) {
+				console.log( "读取拍照文件错误："+e.message );
+				closeLoad();
+			} );
+		}, function ( e ) {
+			console.log( "失败："+e.message );
+			closeLoad();
+		}, {index:1} );
+	}
+	</script>
+	</body>
+</html>

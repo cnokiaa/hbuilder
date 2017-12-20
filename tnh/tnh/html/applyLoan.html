@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../css/applyLoan.css">
+	<script src="../js/libs/flexible.js" type="text/javascript" charset="utf-8"></script>
+	<title>替你还</title>
+</head>
+<body>
+	<nav class="nav step4">
+		<div class="nav-step">
+			<div class="nav-inner">
+				<div class="progress"></div>
+				<ul>
+					<li><b>1</b></li>
+					<li><b>2</b></li>
+					<li><b>3</b></li>
+					<li><b>4</b></li>
+				</ul>
+			</div>
+		</div>
+		<ul class="nav-tit clearfix">
+			<li>申请人照片</li>
+			<li>个人资料</li>
+			<li>银行卡信息</li>
+			<li>提交申请</li>
+		</ul>
+	</nav>
+	<form action="">
+		<div class="sub-inf sub-step">
+			<div class="part-con sub-step1">
+				<!-- 手机号 -->
+				<div class="input-con clearfix">
+					<label for="userMobile">手机号</label>
+					<input type="tel" id="userMobile" class="user-tel" placeholder="请输入手机号" autocomplete="off" maxlength="11" value="18617120544" readonly="readonly">
+				</div>
+				<!-- 验证码 -->
+				<div class="input-con clearfix">
+					<label for="verification">验&nbsp;证&nbsp;码</label>
+					<input id="verification" type="tel" placeholder="请输入短信验证码" autocomplete="off" maxlength="6">
+					<div class="send">点击发送</div>
+					<div class="settime">59s后重发</div>
+				</div>
+			</div>
+			<h2>请确认您的申请信息</h2>
+			<ul class="list">
+				<li>
+					<strong>申请人</strong>
+					<span>呵呵</span>
+				</li>
+				<li>
+					<strong>申请金额</strong>
+					<span>1000元</span>
+				</li>
+				<li>
+					<strong>一次性服务费</strong>
+					<span><em class="red">60.00元</em>(红包已抵扣<em class="red">10.00元</em>)</span>
+				</li>
+				<li>
+					<strong>到账金额</strong>
+					<span>860.00元</span>
+				</li>
+				<li>
+					<strong>申请周期</strong>
+					<span>1周</span>
+				</li>
+				<li>
+					<strong>信用卡号</strong>
+					<span class="creditcard"></span>
+				</li>
+				<li>
+					<strong>还款日</strong>
+					<span>2015年08月08日(一次性还款)</span>
+				</li>
+				<li>
+					<strong>储蓄卡号</strong>
+					<span class="bankcard"></span>
+				</li>
+				<li>
+					<strong>总还款金额</strong>
+					<span class="red">1600.00元</span>
+				</li>
+			</ul>	
+		</div>
+		<input type="hidden" id="creditcardShow" name="creditcardShow" value="621700111111111116476" />
+		<input type="hidden" id="bankcardShow" name="bankcardShow" value="6217002222222264761" />
+	</form>
+	<div class="agreement clearfix ellipsis"><i></i>同意《拉卡拉“替你还”服务协议》</div>
+	<div class="tips">
+		<p>温馨提示：</p>
+		<p>请您在到期还款日前存入足够资金，以免扣收不成功产生滞纳金及利息，影响您的信用记录。</p>
+	</div>
+	<span class="next-step">提交申请</span>
+	<!-- 提示弹窗 -->
+	<div class="popup">
+		<div class="popup-con">
+			<p>提示信息</p>
+			<div>确定</div>
+		</div>
+	</div>
+	<!-- 错误信息 -->
+	<input type="hidden" class="errmsgShow">
+	<script type="text/javascript" data-main="../js/imports/applyLoan_I.js" src="../js/libs/require.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+{"status":"success","errcode":"0000","errmsg":"成功","data":{
+ 	"contractno" : "123",	
+	"businesstype" : "替你还", 
+
+	"applydate" : "20160104",	
+	"period" : "12",		
+	"loantime" : "20160210",	
+	"currentDate" : "20160505",	
+	"currentPeriod" : "12",		
+	"loantime" : "20161412",		
+	"endtime" : "20180510",		
+	"yqDate" : "20162825",		
+
+	"applyamt" : "1234.00",	 
+	"account" : "1245.00",	
+	"loan" : "456.00",		
+	"repcountamt" : "456.00",
+	"onemoney" : "12.00",
+	"freemoney" : "11.00",
+	"currentPay" : "123.00",
+	"currentAmt" : "123.05",	
+	"unsettled" : "8888.00",
+	"yqMoney" : "456.00",		
+
+	"loancard" : "44012121212121", 
+	"debitcard" : "45454545454545",  
+
+	"bujianType" : "1"	
+	}
+}

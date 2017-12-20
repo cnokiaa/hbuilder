@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/applyLoan.css">
+	<script src="../js/libs/flexible.js" type="text/javascript" charset="utf-8"></script>
+	<title>易分期</title>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<!--<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>-->
+		<h1 class="mui-title">易分期</h1>
+	</header>
+	<div class="main-con">
+	<nav class="nav">
+		<ul class="nav-list">
+			<li class="active">申请人照片</li>
+			<li class="active-arr"></li>
+			<li class="active">个人资料</li>
+			<li class="active-arr"></li>
+			<li class="active">银行卡信息</li>
+			<li class="active-arr"></li>
+			<li class="active">提交申请</li>
+		</ul>
+	</nav>
+	<form action="">
+		<div class="sub-inf sub-step">
+			<div class="part-con sub-step1">
+				<!-- 手机号 -->
+				<div class="input-con clearfix">
+					<label for="userMobile">手机号：</label>
+					<input type="tel" id="userMobile" name="mobile" class="user-tel" placeholder="请输入手机号" maxlength="11" value="">
+				</div>
+				<!-- 验证码 -->
+				<div class="input-con clearfix">
+					<label for="verification">验证码：</label>
+					<input id="verification" name="smscode" type="tel" placeholder="请输入短信验证码" autocomplete="off" maxlength="6">
+					<div class="send">点击发送</div>
+					<div class="settime">59s</div>
+				</div>
+			</div>
+			<h2>请确认您的申请信息</h2>
+			<ul class="list">
+				<li>
+					<strong>申请人：</strong>
+					<span class="username"></span>
+				</li>
+				<li>
+					<strong>银行卡：</strong>
+					<span class="bankcard"></span>
+				</li>
+				<li>
+					<strong>申请金额：</strong>
+					<span class="applyamt"></span>
+				</li>
+				<li>
+					<strong>到账金额：</strong>
+					<span class="accountMoney"></span>
+				</li>
+				<li>
+					<strong>手续费：</strong>
+					<span></span>
+				</li>
+				<li>
+					<strong>分期数：</strong>
+					<span></span>
+				</li>
+				<li>
+					<strong>总还款金额：</strong>
+					<span></span>
+				</li>
+			</ul>	
+		</div>
+		<input type="hidden" id="relnameShow" />
+		<input type="hidden" id="bankCardNumShow" />
+		<input type="hidden" name="openid" value="">
+		<input class="errmsgShow" type="hidden" value="">
+	</form>
+	<div class="agreement clearfix ellipsis"><i></i>同意<span>《个人征信查询及报送授权声明》</span></div>
+	<div class="tips">
+		<p>温馨提示：</p>
+		<p>请您在到期还款日前存入足够资金，以免扣收不成功产生滞纳金及利息，影响您的信用记录。</p>
+	</div>
+	<span class="next-step">下一步</span>
+	</div>
+	<!-- 提示弹窗 -->
+	<div class="popup">
+		<div class="popup-con">
+			<h3>尊敬的用户</h3>
+			<p>提示信息</p>
+			<div>
+				<span>确定</span>
+				<b>取消</b>
+				<strong>确定</strong>
+			</div>
+		</div>
+	</div>
+	<!-- 协议列表 -->
+	<div class="agreement-list">
+		<ul>
+			<li><a href="http://download.lakala.com.cn/lklmbl/html/kuaijie_huankuan_ygd_server.html">《拉卡拉信贷还款委托服务协议》</a></li>
+			<li><a href="yfqxy.html">《易分期业务办理协议》</a></li>
+		</ul>
+	</div>
+	<script type="text/javascript" data-main="../js/imports/applyLoan_I.js" src="../js/libs/require.js"></script>
+</body>
+</html>

@@ -1,0 +1,300 @@
+@charset 'utf-8';
+html {
+	background-color: #eceff6;
+}
+nav {
+	border-bottom: 1px solid #efeff4;
+}
+.user-tips {
+	display: none;
+	margin-bottom: 0.75rem;
+	padding: 0.9rem 0 0.55rem;
+	background-color: #fff;
+}
+.user-tips p {
+	font-size: 0.5rem;
+	line-height: 1rem;
+	color: #3c3c3c;
+	text-align: center;
+}
+.user-tips strong {
+	display: block;
+	font-size: 0.8rem;
+	color:#f00;
+	line-height: 1.3rem;
+	text-align: center;
+}
+.main-con1 {
+	margin-bottom: 0.75rem;
+	padding: 0.5rem 0.75rem 0.9rem;
+	background-color: #fff;
+}
+.apply-tip {
+	font-size: 0.7rem;
+	line-height: 1.6rem;
+	color: #3c3c3c;
+}
+.input-apply {
+	overflow: hidden;
+	height: 1.95rem;
+	margin-bottom: 0.25rem;
+	padding: 0 0.28rem;
+	border: 1px solid #b8b8b8;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-box;
+	display: -o-box;
+	display: box;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+}
+.input-apply label,
+.input-apply input,
+.input-apply span {
+	display: block;
+	font-size: 0.55rem;
+}
+.input-apply label,
+.input-apply span {
+	line-height: 1.95rem;
+}
+.input-apply input {
+	border: none;
+	height: 1.95rem;
+	padding: 0 0.5rem;
+	line-height: normal;
+	outline: none;
+	-webkit-box-flex: 1;
+	-moz-box-flex: 1;
+	-ms-box-flex: 1;
+	box-flex: 1;
+}
+.input-apply span b {
+	float: left;
+	width: 0.8rem;
+	height: 1.95rem;
+	margin-right: 0.25rem;
+}
+.input-apply span i {
+	float: left;
+	width: 0.75rem;
+	height: 1.95rem;
+	background: url('../images/money_icon.png') no-repeat center center;
+	-webkit-background-size: 100%;
+	-moz-background-size: 100%;
+	-ms-background-size: 100%;
+	-o-background-size: 100%;
+	background-size: 100%;
+}
+.remove {
+	background: url('../images/chacha.png') no-repeat center center;
+	-webkit-background-size: 100%;
+	-moz-background-size: 100%;
+	-ms-background-size: 100%;
+	-o-background-size: 100%;
+	background-size: 100%;
+}
+.tips {
+	color: #b8b8b8;
+	font-size: 0.55rem;
+	line-height: 1rem;
+	padding-bottom: 0.6rem;
+	border-bottom: 1px solid #b8b8b8;
+}
+/*申请周期*/
+.apply-cycle {
+	display: none;
+	padding-top: 0.35rem;
+}
+.apply-cycle h2 {
+	font-size: 0.7rem;
+	line-height: 1.45rem;
+}
+.cycle-part {
+	overflow: hidden;
+}
+.cycle-part-con {
+	width: 107%;
+}
+.cycle-part span {
+	float: left;
+	width: 2.2rem;
+	height: 1.45rem;
+	margin: 0 0.75rem 0.6rem 0;
+	border: 1px solid #3db3f9;
+	font-size: 0.6rem;
+	line-height: 1.45rem;
+	text-align: center;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+}
+.cycle-part .selected {
+	color: #fff;
+	background-color: #3db3f9;
+}
+/*还款明细*/
+.replay-det {
+	padding: 0.3rem 0.42rem 0.42rem;
+	border: 1px solid #3db3f9;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+}
+.replay-det li {
+	height: 0.82rem;
+}
+.replay-det li:after {
+	display: block;
+	height: 0;
+	content: '\200B';
+	clear: both;
+}
+.replay-det li span,
+.replay-det li strong {
+	height: 100%;
+}
+.replay-det li {
+	font-size: 0.55rem;
+	line-height: 1rem;
+}
+.replay-det em {
+	color: #f00;
+	font-weight: normal;
+}
+.replay-det a {
+	color: #3db3f9;
+	text-decoration: underline;
+}
+.replay-det li span {
+	float: left;
+}
+.replay-det li strong {
+	float: right;
+}
+/*选择红包*/
+.redpack {
+	padding: 0 0.75rem;
+	margin-bottom: 1.13rem;
+	background-color: #fff;
+	font-size: 0.55rem;
+	line-height: 1.75rem;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-box;
+	display: -o-box;
+	display: box;
+}
+.redpack span {
+	display: block;
+	padding-right: 1em;
+}
+.redpack-con {
+	position: relative;
+	text-align: right;
+	-webkit-box-flex: 1;
+	-moz-box-flex: 1;
+	-ms-box-flex: 1;
+	-o-box-flex: 1;
+	box-flex: 1;
+}
+.chose-pack-arrow {
+	position: absolute;
+	right: 0;
+	top: 0.55rem;
+	width: 0.38rem;
+	height: 0.65rem;
+	background: url('../images/arrow.png') no-repeat 0 0;
+	-webkit-background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	-ms-background-size: 100% 100%;
+	-o-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+.redpack-con strong,
+.redpack-con b {
+	display: none;
+}
+.chosed strong,
+.chosed b {
+	display: inline;
+}
+.chosed .chose-pack-arrow {
+	display: none;
+}
+.redpack span,
+.redpack strong {
+	color: #f00;
+}
+.redpack strong {
+	padding-right: 0.5rem;
+}
+.redpack b {
+	font-weight: normal;
+	color: #3db3f9;
+	text-decoration: underline;
+}
+.next-step {
+	width: 93.75%;
+	height: 2rem;
+	margin: 0 auto 1rem;
+	background-color: #3db3f9;
+	color: #fff;
+	font-size: 0.65rem;
+	line-height: 2rem;
+	text-align: center;
+	-webkit-border-radius: 0.13rem;
+	-moz-border-radius: 0.13rem;
+	-ms-border-radius: 0.13rem;
+	-o-border-radius: 0.13rem;
+	border-radius: 0.13rem;
+}
+.disabled {
+	background-color: #b6b6ba;
+}
+/*弹窗提示*/
+.popup {
+	position: fixed;
+	left: 0;
+	top: 0;
+	display: none;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.65);
+	z-index: 1000;
+}
+.popup-con {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 28.03%;
+	overflow: hidden;
+	width: 10rem;
+	margin: 0 auto;
+	background-color: #fff;
+	-webkit-border-radius: 0.3rem;
+	-moz-border-radius: 0.3rem;
+	-ms-border-radius: 0.3rem;
+	-o-border-radius: 0.3rem;
+	border-radius: 0.3rem;
+}
+.popup-con p {
+	padding: 1rem 1em;
+	border-bottom: 1px solid #9c9f9f;
+	color: #000;
+	font: bold 0.6rem/0.93rem "Microsoft YaHei";
+	text-align: center;
+	word-break:break-all;
+}
+.popup-con div {
+	color: #319aff;
+	font: normal 0.6rem/1.75rem "Microsoft YaHei";
+	text-align: center;
+}

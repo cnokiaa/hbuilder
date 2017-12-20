@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../css/orderDetails.css">
+	<script src="../js/libs/flexible.js" type="text/javascript" charset="utf-8"></script>
+	<title>订单详情</title>
+</head>
+<body>
+<header class="mui-bar mui-bar-nav">
+	<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+	<h1 class="mui-title">易分期</h1>
+</header>
+<div class="main-con">
+	<div class="wrap"></div>
+	<div class="btn-part">
+		<a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.lakala.android&amp;g_f=991653" class="btn">立即登录客户端还款</a>
+	</div>
+	<!-- 信息 -->
+</div>
+
+	<!-- 审核中 -->
+	<script id="tpl1" type="text/x-dot-template">
+		<ul>
+			<li class="tit-part in-the-audit">
+				<span>审核中</span>
+				<p>合同号：{{=it.contractno}}</p>
+			</li>
+			<li>
+				<b>业务名称</b>
+				<strong>{{=it.businesstype}}</strong>
+			</li>
+			<li>
+				<b>申请日期 </b>
+				<strong>{{=it.applydate}}</strong>
+			</li>
+			<li>
+				<b>申请金额</b>
+				<strong>{{=it.applyamt}}元</strong>
+			</li>
+			<li>
+				<b>一次性服务费</b>
+				<strong><span class='red'>{{=it.onemoney}}元</span>
+				{{? it.freemoney > 0}}
+				(红包已抵扣<span class='red'>{{=it.freemoney}}元</span>)
+				{{?}}
+				</strong>
+			</li>
+			<li>
+				<b>到账金额</b>
+				<strong>{{=it.account}}元</strong>
+			</li>
+			<li>
+				<b>申请周期</b>
+				<strong>{{=it.period}}周</strong>
+			</li>
+			<li>
+				<b>放款信用卡</b>
+				<strong>{{=it.loancard}}</strong>
+			</li>
+			<li>
+				<b>还款储蓄卡</b>
+				<strong>{{=it.debitcard}}</strong>
+			</li>
+		</ul>
+		<!-- 客服电话 -->
+		<div class="lkltel clearfix">
+			<span>拉卡拉客服：95016</span>
+		</div>
+	</script>
+	<!-- 放款失败 -->
+	<script id="tpl2" type="text/x-dot-template">
+		<ul>
+			<li class="tit-part loan-failure">
+				<span>放款失败</span>
+				<p>合同号：{{=it.contractno}}</p>
+			</li>
+			<li>
+				<b>业务名称</b>
+				<strong>{{=it.businesstype}}</strong>
+			</li>
+			<li>
+				<b>申请日期 </b>
+				<strong>{{=it.applydate}}</strong>
+			</li>
+			<li>
+				<b>申请金额</b>
+				<strong>{{=it.applyamt}}元</strong>
+			</li>
+			<li>
+				<b>一次性服务费</b>
+				<strong><span class='red'>{{=it.onemoney}}元</span>(红包已抵扣<span class='red'>{{=it.freemoney}}元</span>)</strong>
+			</li>
+			<li>
+				<b>到账金额</b>
+				<strong>{{=it.account}}元</strong>
+			</li>
+			<li>
+				<b>申请周期</b>
+				<strong>{{=it.period}}周</strong>
+			</li>
+			<li>
+				<b>放款信用卡</b>
+				<strong>{{=it.loancard}}</strong>
+			</li>
+			<li>
+				<b>还款储蓄卡</b>
+				<strong>{{=it.debitcard}}</strong>
+			</li>
+		</ul>
+		<!-- 客服电话 -->
+		<div class="lkltel clearfix">
+			<span>拉卡拉客服：95016</span>
+		</div>
+	</script>
+	<!-- 待还款 -->
+	<script id="tpl3" type="text/x-dot-template">
+		<ul>
+			<li class="tit-part wait-pay">
+				<span>待还款</span>
+				<p>合同号：{{=it.contractno}}</p>
+			</li>
+			<li>
+				<b>本期还款日</b>
+				<strong class='red'>{{=it.currentDate}}</strong>
+			</li>
+			/*<li>
+				<b>本期期数</b>
+				<strong>{{=it.currentperiod}}</strong>
+			</li>*/
+			{{? Number(it.currentPay) != 0}}
+			<li>
+				<b>本期已还款</b>
+				<strong class="red">{{=it.currentPay}}元</strong>
+			</li>
+			{{?}}
+			<li>
+				<b>本期待还款</b>
+				<strong class="red">{{=it.currentAmt}}元</strong>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<b>业务名称</b>
+				<strong>{{=it.businesstype}}</strong>
+			</li>
+			<li>
+				<b>申请日期</b>
+				<strong>{{=it.applydate}}</strong>
+			</li>
+			<li>
+				<b>借款金额</b>
+				<strong>{{=it.loan}}元</strong>
+			</li>
+			<li>
+				<b>一次性服务费</b>
+				<strong><span class='red'>{{=it.onemoney}}元</span>(红包已抵扣<span class='red'>{{=it.freemoney}}元</span>)</strong>
+			</li>
+			<li>
+				<b>到账金额</b>
+				<strong>{{=it.account}}元</strong>
+			</li>
+			<li>
+				<b>申请周期</b>
+				<strong>{{=it.period}}周</strong>
+			</li>
+			<!--creditcard-->
+			<li>
+				<b>放款信用卡</b>
+				<strong>{{=it.loancard}}</strong>
+			</li>
+			<li>
+				<b>还款储蓄卡</b>
+				<strong>{{=it.debitcard}}</strong>
+			</li>
+			<li>
+				<b>放款日期</b>
+				<strong>{{=it.loantime}}</strong>
+			</li>
+			<li>
+				<b>已还金额</b>
+				<strong class="red">{{=it.repcountamt}}元</strong>
+			</li>
+			<li>
+				<b>剩余待还金额</b>
+				<strong class="red">{{=it.unsettled}}元</strong>
+			</li>
+		</ul>
+		<!-- 客服电话 -->
+		<div class="lkltel clearfix">
+			<span>拉卡拉客服：95016</span>
+		</div>
+	</script>
+	<!-- 已结案 -->
+	<script id="tpl4" type="text/x-dot-template">
+		<ul>
+			<li class="tit-part case-closed">
+				<span>已结案</span>
+				<p>合同号：{{=it.contractno}}</p>
+			</li>
+			<li>
+				<b>业务名称</b>
+				<strong>{{=it.businesstype}}</strong>
+			</li>
+			<li>
+				<b>申请日期</b>
+				<strong>{{=it.applydate}}</strong>
+			</li>
+			<li>
+				<b>借款金额</b>
+				<strong>{{=it.loan}}元</strong>
+			</li>
+			<li>
+				<b>一次性服务费</b>
+				<strong><span class='red'>{{=it.onemoney}}元</span>(红包已抵扣<span class='red'>{{=it.freemoney}}元</span>)</strong>
+			</li>
+			<li>
+				<b>到账金额</b>
+				<strong>{{=it.account}}元</strong>
+			</li>
+			<li>
+				<b>申请周期</b>
+				<strong>{{=it.period}}月</strong>
+			</li>
+			<!--creditcard-->
+			<li>
+				<b>放款信用卡</b>
+				<strong>{{=it.loancard}}</strong>
+			</li>
+			<li>
+				<b>还款储蓄卡</b>
+				<strong>{{=it.debitcard}}</strong>
+			</li>
+			<li>
+				<b>放款日期</b>
+				<strong>{{=it.loantime}}</strong>
+			</li>
+			<li>
+				<b>结案日期</b>
+				<strong>{{=it.endtime}}</strong>
+			</li>
+			<li>
+				<b>实际还款总额</b>
+				<strong class="red">{{=it.repcountamt}}元</strong>
+			</li>
+		</ul>
+		<!-- 客服电话 -->
+		<div class="lkltel clearfix">
+			<span>拉卡拉客服：95016</span>
+		</div>
+	</script>
+	<!-- 已逾期 -->
+	<script id="tpl5" type="text/x-dot-template">
+		<ul>
+			<li class="tit-part overdue">
+				<span>已逾期</span>
+				<p>合同号：{{=it.contractno}}</p>
+			</li>
+			<li>
+				<b>逾期日期</b>
+				<strong class="red">{{=it.yqDate}}</strong>
+			</li>
+			<li>
+				<b>逾期未还款</b>
+				<strong class="red">{{=it.yqMoney}}元</strong>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<b>业务名称</b>
+				<strong>{{=it.businesstype}}</strong>
+			</li>
+			<li>
+				<b>申请日期</b>
+				<strong>{{=it.applydate}}</strong>
+			</li>
+			<li>
+				<b>借款金额</b>
+				<strong>{{=it.loan}}元</strong>
+			</li>
+			<li>
+				<b>一次性服务费</b>
+				<strong><span class='red'>{{=it.onemoney}}元</span>(红包已抵扣<span class='red'>{{=it.freemoney}}元</span>)</strong>
+			</li>
+			<li>
+				<b>到账金额</b>
+				<strong>{{=it.account}}元</strong>
+			</li>
+			<li>
+				<b>申请周期</b>
+				<strong>{{=it.period}}月</strong>
+			</li>
+			<!--creditcard-->
+			<li>
+				<b>放款信用卡</b>
+				<strong>{{=it.loancard}}</strong>
+			</li>
+			<li>
+				<b>还款储蓄卡</b>
+				<strong>{{=it.debitcard}}</strong>
+			</li>
+			<li>
+				<b>放款日期</b>
+				<strong>{{=it.loantime}}</strong>
+			</li>
+			<li>
+				<b>已还金额</b>
+				<strong class="red">{{=it.repcountamt}}元</strong>
+			</li>
+			<li>
+				<b>剩余待还金额</b>
+				<strong class="red">{{=it.unsettled}}元</strong>
+			</li>
+		</ul>
+		<!-- 客服电话 -->
+		<div class="lkltel clearfix">
+			<span>拉卡拉客服：95016</span>
+		</div>
+	</script>
+	<!-- 审核失败 -->
+	<script id="tpl6" type="text/x-dot-template">
+		<ul>
+			<li class="tit-part audit-failure">
+				<span>审核失败</span>
+				<p>合同号：{{=it.contractno}}</p>
+			</li>
+			<li>
+				<b>业务名称</b>
+				<strong>{{=it.businesstype}}</strong>
+			</li>
+			<li>
+				<b>申请日期 </b>
+				<strong>{{=it.applydate}}</strong>
+			</li>
+			<li>
+				<b>申请金额</b>
+				<strong>{{=it.applyamt}}元</strong>
+			</li>
+			<li>
+				<b>一次性服务费</b>
+				<strong><span class='red'>{{=it.onemoney}}元</span>(红包已抵扣<span class='red'>{{=it.freemoney}}元</span>)</strong>
+			</li>
+			<li>
+				<b>到账金额</b>
+				<strong>{{=it.account}}元</strong>
+			</li>
+			<li>
+				<b>申请周期</b>
+				<strong>{{=it.period}}月</strong>
+			</li>
+			<li>
+				<b>放款信用卡</b>
+				<strong>{{=it.loancard}}</strong>
+			</li>
+			<li>
+				<b>还款储蓄卡</b>
+				<strong>{{=it.debitcard}}</strong>
+			</li>
+			{{? it.bujianType == 1}}
+			<li>
+				<b>失败原因</b>
+				<strong class="red">银行卡待补件</strong>
+			</li>
+			{{?}}
+			{{? it.bujianType == 2}}
+			<li>
+				<b>失败原因</b>
+				<strong class="red">图片待补件</strong>
+			</li>
+			{{?}}
+		</ul>
+		<!-- 客服电话 -->
+		<div class="lkltel clearfix">
+			<span>拉卡拉客服：95016</span>
+		</div>
+		{{? it.bujianType == 1}}
+			<form action="/credit-loan-app-hdw/hdw/application/add/bankCardbj" method="post">
+				<input type="hidden" name="contractno" value="${contractno}">
+				<input type="hidden" name="username" value="${username}">
+				<input class="sup-inf" type="submit" value="补充资料">
+			</form>
+		{{?}}
+		{{? it.bujianType == 2}}
+			<form action="/credit-loan-app-hdw/hdw/application/upload/imagesbj" method="post">
+				<input type="hidden" name="contractno" value="${contractno}">
+				<input type="hidden" name="orderno" value="${orderno}">
+				<input class="sup-inf" type="submit" value="补充资料">
+			</form>
+		{{?}}
+	</script>
+	<script type="text/javascript" data-main="../js/imports/orderDetails_I.js" src="../js/libs/require.js"></script>
+</body>
+</html>

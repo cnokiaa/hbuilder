@@ -1,0 +1,223 @@
+{
+  "html/trialCalculate.html": {
+    "href": "html/trialCalculate.html",
+    "priority": 0,
+    "resources": [
+      "js/libs/flexible.js",
+      "js/libs/zepto.min.js",
+      "js/modules/trialCalculate.js",
+      "js/imports/trialCalculate_I.js",
+      "images/nav_dot.png",
+      "images/loading.gif",
+      "css/trialCalculate.css",
+      "js/libs/touch.js",
+      "js/libs/underscore-min.js",
+      "images/record.png",
+      "js/libs/require.js",
+      "js/config.js",
+      "images/chacha.png",
+      "json/product.json",
+      "images/light.png",
+      "json/plan.json",
+      "html/myRedPack.html",
+      "html/record.html"
+    ],
+    "refer": [
+      "html/../html/uploadImages.html",
+      "html/../html/orderDetails.html",
+      "html/../html/record.html",
+      "html/../html/myRedPack.html"
+    ]
+  },
+  "html/myRedPack.html": {
+    "resources": [
+      "css/myRedPack.css",
+      "js/libs/zepto.min.js",
+      "js/getRedPackImport.js",
+      "js/libs/touch.js",
+      "js/modules/redPackList.js",
+      "images/loading51.gif",
+      "images/redpack.png",
+      "js/config.js",
+      "js/libs/iscroll-lite.js",
+      "js/libs/flexible.js",
+      "js/libs/require.js"
+    ],
+    "refer": []
+  },
+  "html/uploadImages.html": {
+    "resources": [
+      "images/idcard_bg.jpg",
+      "images/backcard.jpg",
+      "images/facecard.jpg",
+      "images/empty_dot.png",
+      "images/ex_wrong1.jpg",
+      "js/modules/uploadImages.js",
+      "js/utils.js",
+      "js/libs/zepto.min.js",
+      "images/loading.gif",
+      "images/right.png",
+      "js/libs/touch.js",
+      "images/idcard_back_bg.jpg",
+      "css/uploadImages.css",
+      "images/nav_back.png",
+      "js/libs/flexible.js",
+      "images/catchcard.jpg",
+      "js/imports/uploadImages_I.js",
+      "js/libs/require.js",
+      "js/config.js",
+      "images/bigcard_3.jpg",
+      "images/arrow.png",
+      "images/close_bigpic.png",
+      "images/bigcard_1.jpg"
+    ],
+    "refer": []
+  },
+  "html/addPersonalAndWorkUnit.html": {
+    "resources": [
+      "images/tel_tip.png",
+      "images/arrow.png",
+      "js/libs/underscore-min.js",
+      "css/addPersonalAndWorkUnit.css",
+      "images/empty_dot.png",
+      "js/libs/iscroll-lite.js",
+      "js/utils.js",
+      "js/libs/flexible.js",
+      "js/libs/zepto.min.js",
+      "js/modules/addPersonalAndWorkUnit.js",
+      "images/right.png",
+      "js/libs/touch.js",
+      "js/imports/addPersonalAndWorkUnit_I.js",
+      "js/libs/require.js",
+      "images/nav_back.png",
+      "js/config.js",
+      "images/agree.png",
+      "json/provinceList.json",
+      "json/cityList.json",
+      "json/cityAreaList.json",
+      "json/contactRelationList.json"
+    ],
+    "refer": []
+  },
+  "html/addBankCard.html": {
+    "resources": [
+      "images/arrow.png",
+      "css/addBankCard.css",
+      "images/empty_dot.png",
+      "js/libs/iscroll-lite.js",
+      "js/utils.js",
+      "js/libs/flexible.js",
+      "js/libs/zepto.min.js",
+      "images/right.png",
+      "js/libs/touch.js",
+      "js/modules/addBankCard.js",
+      "js/imports/addBankCard_I.js",
+      "js/libs/require.js",
+      "images/nav_back.png",
+      "js/config.js",
+      "images/agree.png",
+      "json/debitBankList.json"
+    ],
+    "refer": []
+  },
+  "html/applyLoan.html": {
+    "resources": [
+      "js/utils.js",
+      "js/modules/applyLoan.js",
+      "js/libs/flexible.js",
+      "js/libs/zepto.min.js",
+      "js/libs/touch.js",
+      "css/applyLoan.css",
+      "js/libs/require.js",
+      "js/config.js",
+      "js/imports/applyLoan_I.js",
+      "images/agree.png",
+      "images/right.png",
+      "images/empty_dot.png",
+      "images/nav_back.png"
+    ],
+    "refer": [
+      "html/../html/success.html"
+    ]
+  },
+  "html/success.html": {
+    "resources": [
+      "images/lkl_app.jpg",
+      "css/success.css"
+    ],
+    "refer": []
+  },
+  "html/record.html": {
+    "resources": [
+      "js/libs/flexible.js",
+      "js/imports/record_I.js",
+      "js/libs/fx.js",
+      "js/libs/zepto.min.js",
+      "images/loading.gif",
+      "css/record.css",
+      "js/libs/touch.js",
+      "js/libs/require.js",
+      "json/applyLoansRecord.json",
+      "js/modules/record.js",
+      "js/config.js",
+      "js/libs/iscroll-lite.js",
+      "js/libs/fx_methods.js"
+    ],
+    "refer": [
+      "html/../html/orderDetails.html"
+    ]
+  },
+  "html/orderDetails.html": {
+    "resources": [
+      "js/imports/orderDetails_I.js",
+      "css/orderDetails.css",
+      "js/libs/zepto.min.js",
+      "js/modules/orderDetails.js",
+      "js/config.js",
+      "js/libs/doT.min.js",
+      "js/libs/flexible.js",
+      "json/orderDetails.json",
+      "js/libs/require.js",
+      "js/libs/touch.js"
+    ],
+    "refer": []
+  },
+  "html/camera.html": {
+    "resources": [
+      "js/libs/flexible.js"
+    ],
+    "refer": []
+  },
+  "html/checkFace.html": {
+    "resources": [
+      "js/libs/flexible.js",
+      "js/libs/zepto.min.js",
+      "css/checkface.css",
+      "js/libs/touch.js",
+      "html/camera.html",
+      "images/testface.jpg",
+      "images/empty_dot.png",
+      "images/nav_back.png"
+    ],
+    "refer": []
+  },
+  "html/../html/record.html": {
+    "refer": [
+      "html/../html/orderDetails.html"
+    ],
+    "resources": []
+  },
+  "html/../html/myRedPack.html": {
+    "refer": [
+      "html/../html/trialCalculate.html"
+    ],
+    "resources": []
+  },
+  "html/../html/trialCalculate.html": {
+    "refer": [
+      "html/../html/record.html",
+      "html/../html/uploadImages.html"
+    ],
+    "resources": []
+  }
+}
